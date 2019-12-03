@@ -1,0 +1,26 @@
+#####################################################
+######## Advent of Code 2019 Day 01 Part 2 ##########
+#####################################################
+
+import math
+total_fuel = 0
+additional_fuel = 0
+file = open('C:\\Users\\ryan.jackson\\Desktop\\input.txt', 'r')
+
+def calculate_fuel(mass):
+    return int(math.floor(int(mass) / 3) - 2)
+
+
+
+for module in file.readlines():
+    module_fuel = calculate_fuel(module)
+    required_additional_fuel = module_fuel
+    while required_additional_fuel > 0:
+        required_additional_fuel = calculate_fuel(required_additional_fuel)
+        if required_additional_fuel > 0:
+            module_fuel += required_additional_fuel
+
+    total_fuel += module_fuel
+
+print total_fuel
+

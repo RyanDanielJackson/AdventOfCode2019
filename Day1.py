@@ -1,8 +1,6 @@
 #####################################################
 ########## Advent of Code 2019 Day 01 ##############
 #####################################################
-
-import os
 import math
 total_fuel = 0
 file = open('C:\\Users\\ryan.jackson\\Desktop\\input.txt', 'r')
